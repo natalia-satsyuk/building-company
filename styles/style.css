@@ -206,7 +206,7 @@ nav {
           content: "\f105";
           font-family: FontAwesome;
           font-size: 20px;
-          padding-left: 25px;
+          padding-left: 20px;
           color: white; } }
   .nav-list .nav-list-link {
     color: #3498db;
@@ -224,15 +224,34 @@ nav {
   position: absolute;
   top: 70px;
   left: 0;
-  text-align: left; }
+  padding-top: 10px;
+  text-align: left;
+  z-index: 1; }
+  @media screen and (max-width: 768px) {
+    .nav-second-list {
+      top: 0;
+      left: initial;
+      right: -27%;
+      background: gray; } }
+  @media screen and (max-width: 480px) {
+    .nav-second-list {
+      top: 40px;
+      right: -20%; } }
   .nav-second-list .nav-second-item {
     display: inline-block;
     padding-right: 25px; }
+    @media screen and (max-width: 768px) {
+      .nav-second-list .nav-second-item {
+        padding: 0 0 10px 10px; } }
   .nav-second-list .nav-second-link {
     text-decoration: none;
     font-size: 16px;
     line-height: 25px;
     color: white; }
+    @media screen and (max-width: 768px) {
+      .nav-second-list .nav-second-link {
+        font-size: 12px;
+        line-height: 18px; } }
   .nav-second-list .nav-second-button {
     background: transparent;
     border: none;
@@ -249,6 +268,9 @@ nav {
     position: absolute;
     top: -16px;
     left: 12%; }
+    @media screen and (max-width: 768px) {
+      .nav-second-list:before {
+        display: none; } }
 
 .hover {
   display: block; }
@@ -423,7 +445,8 @@ nav {
       padding: 20px 0; } }
 
 .slider-wrap, .second-slider-wrap {
-  padding-bottom: 80px; }
+  padding-bottom: 80px;
+  overflow: hidden; }
 
 .slider-stuff-item {
   font-size: 0;
@@ -450,6 +473,9 @@ nav {
   @media screen and (max-width: 768px) {
     .stuff-slider-about {
       padding: 15px; } }
+  @media screen and (max-width: 480px) {
+    .stuff-slider-about {
+      padding: 15px 7px; } }
 
 .slider-about-heading {
   color: #284765;
@@ -759,8 +785,27 @@ nav {
     display: inline-block;
     font-size: 24px;
     color: #2d6481; }
+    @media screen and (max-width: 480px) {
+      .footer-downer .footer-downer-link {
+        font-size: 20px; } }
 
 .slick-slide img {
   display: inline-block; }
+
+.slick-dots li button:before {
+  top: -60px;
+  font-size: 40px; }
+
+.slick-dots li.slick-active button:before {
+  color: #d53428;
+  font-size: 50px;
+  opacity: 1; }
+
+.second-slider-wrap .slick-dots li.slick-active button:before {
+  color: #024566; }
+
+.slick-prev:before,
+.slick-next:before {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */

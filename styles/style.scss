@@ -76,7 +76,6 @@ header {
 .header-enter {
 	display: inline-block;
 	vertical-align: middle;
-	// text-align: center;
 }
 
 .header-logo,
@@ -218,7 +217,6 @@ nav {
 	@media screen and (max-width: 768px) {
 		display: inline-block;
 		width: 19%;
-	    // padding-left: 30px;
 	    font-size: 30px;
 		color: #3498db;
 	    cursor: pointer;
@@ -267,7 +265,7 @@ nav {
 		    	content: "\f105";
 		    	font-family: FontAwesome;
 		    	font-size: 20px;
-		    	padding-left: 25px;
+		    	padding-left: 20px;
 		    	color: white;
 		    }
 		}
@@ -292,11 +290,29 @@ nav {
 	position: absolute;
 	top: 70px;
 	left: 0;
+	padding-top: 10px;
 	text-align: left;
+	z-index: 1;
+
+	@media screen and (max-width: 768px) {
+		top: 0;
+		left: initial;
+		right: -27%;
+		background: gray;
+	}
+
+	@media screen and (max-width: 480px) {
+		top: 40px;
+		right: -20%;
+	}
 
 	.nav-second-item {
 		display: inline-block;
 		padding-right: 25px;
+
+		@media screen and (max-width: 768px) {
+			padding: 0 0 10px 10px;
+		}
 	}
 
 	.nav-second-link {
@@ -304,6 +320,11 @@ nav {
 		font-size: 16px;
 		line-height: 25px;
 		color: white;
+
+		@media screen and (max-width: 768px) {
+			font-size: 12px;
+			line-height: 18px;
+		}
 	} 
 
 	.nav-second-button {
@@ -324,11 +345,15 @@ nav {
 	    position: absolute;
 	    top: -16px;
 	    left: 12%;
+
+	    @media screen and (max-width: 768px) {
+			display: none;
+		}
 	}
 }
 
 .hover {
-	display: block;
+	display: block; //for jquery - menu
 }
 
 .mouse-leave {
@@ -558,6 +583,7 @@ nav {
 
 .slider-wrap, .second-slider-wrap {
 	padding-bottom: 80px;
+	overflow: hidden;
 }
 
 .slider-stuff-item {
@@ -592,6 +618,10 @@ nav {
 
 	@media screen and (max-width: 768px) {
 		padding: 15px;
+	}
+
+	@media screen and (max-width: 480px) {
+		padding: 15px 7px;
 	}
 }
 
@@ -973,8 +1003,7 @@ nav {
 
 .footer-main-sign {
 	width: 25%;
-	// vertical-align: top;
-
+	
 	@media screen and (max-width: 992px) {
 		width: 20%;
 	}
@@ -1030,32 +1059,38 @@ nav {
 		display: inline-block;
 		font-size: 24px;
 		color: #2d6481;
+
+		@media screen and (max-width: 480px) {
+			font-size: 20px;
+		}
 	}
 }
 // end of FOOTER
 
-
-
-
-
-
-
 // for slick slider
-// .slick-list {
-// 	padding-top: 50px;
-// }
 
 .slick-slide img {
 	display: inline-block;
 }
 
-// .slick-dots li button:before {
-//   	position: absolute;
-//   	top: -70px;
-//   	left: 0;
-//   	content: "";
-//   	width: 18px;
-//   	height: 6px;
-//   	background-color: red;
-// }  
+.slick-dots li button:before {
+  	top: -60px;
+  	font-size: 40px;
+}  
 
+.slick-dots li.slick-active button:before {
+  color: $color;
+  font-size: 50px;
+  opacity: 1;
+}
+
+.second-slider-wrap {
+	.slick-dots li.slick-active button:before {
+	  color: #024566;
+	}
+}
+
+.slick-prev:before,
+.slick-next:before {
+	display: none;
+}
