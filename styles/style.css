@@ -673,7 +673,7 @@ nav {
   .footer-main-support .foter-main-logo-link {
     text-decoration: none; }
     .footer-main-support .foter-main-logo-link img {
-      width: 100%; }
+      width: 55%; }
       @media screen and (max-width: 768px) {
         .footer-main-support .foter-main-logo-link img {
           width: 20%; } }

@@ -13,15 +13,30 @@ $(".menu").click(function() {
 // 	 $(this).addClass("active");
 // });
 
+
+
+
+
 // list
 
 $(".hover-list").hover(function() {
 	$(".nav-second-list").addClass("hover");
 });
 
-$(".nav-second-list").mouseleave(function() {
-	$(this).removeClass("hover").addClass("mouse-leave");
+console.log("1111");
+
+$(".nav-second-list").mouseout(function() {
+	console.log(this);
+	$(".nav-second-list").removeClass("hover").addClass("mouse-leave");
 });
+
+
+
+
+
+
+
+
 // slider
 
 $(".slider-wrap").slick({
